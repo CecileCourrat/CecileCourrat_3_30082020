@@ -1,0 +1,28 @@
+
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'shrikhand', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.logo {
+   padding: 10px 20px 5px 80px;
+   height: 4vh;
+}
+
+.lieu {
+    background-color: #e7e4e4;
+    display: flex;
+    .fa-map-marker-alt {
+        padding: 20px 10px 5px 80px;
+    }
+}
