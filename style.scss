@@ -1,3 +1,7 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E200;
+
 
 body {
     font-family: 'roboto', sans-serif;
@@ -14,15 +18,99 @@ a {
 }
 
 
-.logo {
+.header_logo {
    padding: 10px 20px 5px 80px;
    height: 4vh;
 }
 
-.lieu {
-    background-color: #e7e4e4;
+.bloc-localisation {
+    background-color: #eaeaea;
     display: flex;
     .fa-map-marker-alt {
         padding: 20px 10px 5px 80px;
+    }
+}
+
+.bloc-presentation {
+    background-color: #f6f6f6;
+    padding: 10px 5px 35px 5px;
+    h2 {
+        font-size: 1.4rem;
+        padding-left: 55px;
+    }
+    p {
+        padding-left: 35px;
+    }
+    button {
+        border-radius: 20px;
+        height: 7vh;
+        margin-left: 65px;
+        padding: 0 10px 0 10px;
+        border: none;
+        background-color: $secondary-color;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.bloc-fonctionnement {
+    h2 {
+        font-size: 1.4rem;
+        padding-left: 20px;
+    }
+    .bloc-fonctionnement_liste li {
+        border-radius: 20px;
+        list-style-type: none;
+        margin: 15px;
+        height: 7vh;
+        background-color: #f6f6f6;
+        text-align: center;
+        padding-top: 20px;
+        width: 80%;
+    }
+    .icone {
+        padding: 0 20px 0 2px;
+        color: grey;
+    }
+}
+
+.restaurants-liste {
+    background-color: #f6f6f6;
+    padding-bottom: 35px;
+    h2 {
+        padding: 40px 0 0 10px;
+    }
+    article {
+        border-radius: 20px;
+        background-color: white;
+        margin: 15px;
+    }
+    article img {
+        height: 22vh;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }  
+}
+
+
+footer {
+    background-color:#353535;
+    color: white;
+    padding-bottom: 13px;
+    .footer_logo {
+        font-family: 'shrikhand';
+        font-size: 0.8rem;
+        padding: 10px 0 0 18px;
+    }
+    .footer_liste ul {
+        list-style-type: none;
+        padding: 13px;
+    }
+    .footer_liste li {
+        padding: 5px
+    }
+    .fa-utensils, .fa-hands-helping { 
+        padding: 0 10px 0 5px;  
     }
 }
