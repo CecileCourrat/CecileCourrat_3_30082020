@@ -12,62 +12,68 @@ a {
   color: black;
 }
 
-.header_logo {
-  padding: 10px 20px 5px 80px;
+.header__logo {
+  padding: 10px 0 7px 105px;
   height: 4vh;
 }
 
-.bloc-localisation {
+.localisation {
   background-color: #eaeaea;
   display: flex;
 }
 
-.bloc-localisation .fa-map-marker-alt {
-  padding: 20px 10px 5px 80px;
+.localisation .fa-map-marker-alt {
+  padding: 20px 10px 2px 105px;
 }
 
-.bloc-presentation {
+.presentation {
   background-color: #f6f6f6;
-  padding: 10px 5px 35px 5px;
+  padding: 10px 0 65px 0;
+  text-align: center;
 }
 
-.bloc-presentation h2 {
-  font-size: 1.4rem;
-  padding-left: 55px;
+.presentation h2 {
+  font-size: 1.5rem;
 }
 
-.bloc-presentation p {
-  padding-left: 35px;
+.presentation p {
+  font-size: 1.1rem;
 }
 
-.bloc-presentation button {
-  border-radius: 20px;
-  height: 7vh;
-  margin-left: 65px;
-  padding: 0 10px 0 10px;
+.presentation button {
+  border-radius: 30px;
+  height: 8vh;
+  padding: 0 15px 0 15px;
   border: none;
   background-color: #FF79DA;
   color: white;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.bloc-fonctionnement h2 {
-  font-size: 1.4rem;
-  padding-left: 20px;
+.fonctionnement {
+  padding-bottom: 20px;
 }
 
-.bloc-fonctionnement .bloc-fonctionnement_liste li {
+.fonctionnement h2 {
+  font-size: 1.5rem;
+  padding: 20px 0 5px 20px;
+}
+
+.fonctionnement .fonctionnement__liste li {
   border-radius: 20px;
+  box-shadow: 5px 5px 10px #d4d4d4;
   list-style-type: none;
-  margin: 15px;
+  margin: 20px;
   height: 7vh;
   background-color: #f6f6f6;
   text-align: center;
   padding-top: 20px;
   width: 80%;
+  font-weight: bold;
 }
 
-.bloc-fonctionnement .icone {
+.fonctionnement .icone {
   padding: 0 20px 0 2px;
   color: grey;
 }
@@ -119,7 +125,7 @@ footer .fa-utensils, footer .fa-hands-helping {
   padding: 0 10px 0 5px;
 }
 
-header {
+.header_restaurant {
   display: flex;
   padding-bottom: 10px;
 }
@@ -130,6 +136,8 @@ header {
 
 .restaurant_img {
   width: 100%;
+  height: 40vh;
+  object-fit: cover;
 }
 
 .menu-restaurant {

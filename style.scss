@@ -1,3 +1,4 @@
+
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E200;
@@ -18,61 +19,66 @@ a {
 }
 
 
-.header_logo {
-   padding: 10px 20px 5px 80px;
+.header__logo {
+   padding: 10px 0 7px 105px;
    height: 4vh;
 }
 
-.bloc-localisation {
+.localisation {
     background-color: #eaeaea;
     display: flex;
     .fa-map-marker-alt {
-        padding: 20px 10px 5px 80px;
+        padding: 20px 10px 2px 105px;
     }
 }
 
-.bloc-presentation {
+.presentation {
     background-color: #f6f6f6;
-    padding: 10px 5px 35px 5px;
+    padding: 10px 0 65px 0;
+    text-align: center;
     h2 {
-        font-size: 1.4rem;
-        padding-left: 55px;
+        font-size: 1.5rem;
     }
     p {
-        padding-left: 35px;
+        font-size: 1.1rem;
     }
     button {
-        border-radius: 20px;
-        height: 7vh;
-        margin-left: 65px;
-        padding: 0 10px 0 10px;
+        border-radius: 30px;
+        height: 8vh;
+        padding: 0 15px 0 15px;
         border: none;
         background-color: $secondary-color;
         color: white;
         font-weight: bold;
+        font-size: 0.9rem;
     }
 }
 
-.bloc-fonctionnement {
+.fonctionnement {
+    padding-bottom: 20px;
     h2 {
-        font-size: 1.4rem;
-        padding-left: 20px;
+        font-size: 1.5rem;
+        padding: 20px 0 5px 20px;
     }
-    .bloc-fonctionnement_liste li {
+    .fonctionnement__liste li {
         border-radius: 20px;
+        box-shadow: 5px 5px 10px #d4d4d4;
         list-style-type: none;
-        margin: 15px;
+        margin: 20px;
         height: 7vh;
         background-color: #f6f6f6;
         text-align: center;
         padding-top: 20px;
         width: 80%;
+        font-weight: bold;
     }
     .icone {
         padding: 0 20px 0 2px;
         color: grey;
     }
 }
+
+
 
 .restaurants-liste {
     background-color: #f6f6f6;
@@ -115,7 +121,7 @@ footer {
     }
 }
 
-header {
+.header_restaurant {
     display: flex;
     padding-bottom: 10px;
 }
@@ -125,7 +131,9 @@ header {
 } 
 
 .restaurant_img {
-    width: 100%;      
+    width: 100%;   
+    height: 40vh;  
+    object-fit: cover; 
 }
 
 .menu-restaurant {
