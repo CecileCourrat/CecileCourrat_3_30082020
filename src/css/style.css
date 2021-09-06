@@ -60,6 +60,10 @@ a {
   padding: 20px 0 5px 20px;
 }
 
+.fonctionnement .fonctionnement__liste {
+  padding-left: 10px;
+}
+
 .fonctionnement .fonctionnement__liste li {
   border-radius: 20px;
   box-shadow: 5px 5px 10px #d4d4d4;
@@ -69,7 +73,7 @@ a {
   background-color: #f6f6f6;
   text-align: center;
   padding-top: 20px;
-  width: 80%;
+  width: 90%;
   font-weight: bold;
 }
 
@@ -80,44 +84,56 @@ a {
 
 .restaurants-liste {
   background-color: #f6f6f6;
-  padding-bottom: 35px;
+  padding-bottom: 50px;
 }
 
 .restaurants-liste h2 {
-  padding: 40px 0 0 10px;
+  font-size: 1.5rem;
+  padding: 40px 0 0 20px;
 }
 
 .restaurants-liste article {
   border-radius: 20px;
   background-color: white;
   margin: 15px;
+  box-shadow: 5px 5px 10px #d4d4d4;
+  height: 36vh;
 }
 
 .restaurants-liste article img {
-  height: 22vh;
+  height: 25vh;
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 
+.restaurants-liste__titre h4 {
+  margin: 8px;
+}
+
+.restaurants-liste__titre p {
+  margin: 0;
+  padding-left: 7px;
+}
+
 footer {
   background-color: #353535;
   color: white;
-  padding-bottom: 13px;
+  padding-bottom: 6px;
 }
 
-footer .footer_logo {
+footer .footer__logo {
   font-family: 'shrikhand';
   font-size: 0.8rem;
   padding: 10px 0 0 18px;
 }
 
-footer .footer_liste ul {
+footer .footer__liste ul {
   list-style-type: none;
-  padding: 13px;
+  padding: 4px 0 13px 18px;
 }
 
-footer .footer_liste li {
+footer .footer__liste ul li {
   padding: 5px;
 }
 
@@ -125,16 +141,21 @@ footer .fa-utensils, footer .fa-hands-helping {
   padding: 0 10px 0 5px;
 }
 
-.header_restaurant {
+.header-restaurant {
   display: flex;
   padding-bottom: 10px;
 }
 
-.fa-arrow-left {
-  padding: 12px;
+.header-restaurant .fa-arrow-left {
+  padding: 14px;
 }
 
-.restaurant_img {
+.header-restaurant .header-restaurant__logo {
+  height: 4.5vh;
+  padding: 10px 0 8px 50px;
+}
+
+.restaurant__img {
   width: 100%;
   height: 40vh;
   object-fit: cover;
@@ -146,7 +167,7 @@ footer .fa-utensils, footer .fa-hands-helping {
   padding: 20px 0 70px 15px;
 }
 
-.menu-restaurant .menu-restaurant_titre {
+.menu-restaurant .menu-restaurant__titre {
   display: flex;
   padding-left: 20px;
 }
@@ -160,26 +181,27 @@ footer .fa-utensils, footer .fa-hands-helping {
   background-color: #FF79DA;
   color: white;
   border-radius: 20px;
+  border: none;
   width: 40vw;
   height: 8vh;
   font-weight: bold;
   margin: 15px 25px 8px 70px;
 }
 
-.menu_liste {
+.menu__liste {
   border-radius: 20px;
   background-color: white;
   width: 90vw;
   margin-bottom: 15px;
-  box-shadow: 1px 1px 8px #e9e9e9;
+  box-shadow: 5px 5px 10px #d4d4d4;
 }
 
-.menu_liste h3 {
+.menu__liste h3 {
   padding: 12px 0 0 12px;
   margin: 3px;
 }
 
-.menu_liste p {
+.menu__liste p {
   padding: 0 0 12px 12px;
   margin: 3px;
 }
