@@ -18,17 +18,29 @@ a {
     color: black;
 }
 
-
-.header__logo {
-   padding: 10px 0 7px 105px;
-   height: 4vh;
+header {
+    display: flex;
+    justify-content: center;
+    .header__logo {
+        width: 45vw;
+        padding: 10px;
+    }
 }
+
 
 .localisation {
     background-color: #eaeaea;
     display: flex;
-    .fa-map-marker-alt {
-        padding: 20px 10px 2px 105px;
+    justify-content: center;
+    padding: 14px 0 14px 0;
+    box-shadow: inset 0 10px 5px -5px #d4d4d4;
+    .localisation__formulaire {
+        border: none;
+        background-color: #eaeaea ;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;      
+        width: 40vw;
     }
 }
 
