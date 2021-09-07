@@ -13,6 +13,10 @@ h1 {
     font-family: 'shrikhand', sans-serif;
 }
 
+h2 {
+    font-size: 1.5rem;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -46,30 +50,29 @@ header {
 
 .presentation {
     background-color: #f6f6f6;
-    padding: 10px 0 65px 0;
+    padding: 12px 0 70px 0;
     text-align: center;
-    h2 {
-        font-size: 1.5rem;
-    }
     p {
         font-size: 1.1rem;
+        padding-bottom: 10px;
     }
     button {
         border-radius: 30px;
         height: 8vh;
         padding: 0 15px 0 15px;
         border: none;
-        background-color: $secondary-color;
+        background: linear-gradient( $secondary-color, $primary-color );
         color: white;
         font-weight: bold;
         font-size: 0.9rem;
+        box-shadow: 5px 5px 10px #d4d4d4;
     }
 }
+
 
 .fonctionnement {
     padding-bottom: 20px;
     h2 {
-        font-size: 1.5rem;
         padding: 20px 0 5px 20px;
     }
     .fonctionnement__liste {
@@ -99,7 +102,6 @@ header {
     background-color: #f6f6f6;
     padding-bottom: 50px;
     h2 {
-        font-size: 1.5rem;
         padding: 40px 0 0 20px;
     }
     article {
@@ -119,11 +121,12 @@ header {
 
 .restaurants-liste__titre {
     h4 {
-        margin: 8px;
+        margin: 0;
+        padding: 10px 0 2px 12px;
     }
     p {
         margin: 0;
-        padding-left: 7px;
+        padding-left: 12px;
     }
 }
 
@@ -131,10 +134,9 @@ header {
 footer {
     background-color:#353535;
     color: white;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     .footer__logo {
         font-family: 'shrikhand';
-        font-size: 0.8rem;
         padding: 10px 0 0 18px;
     }
     .footer__liste ul {
@@ -148,6 +150,7 @@ footer {
         padding: 0 10px 0 5px;  
     }
 }
+
 
 .header-restaurant {
     display: flex;
