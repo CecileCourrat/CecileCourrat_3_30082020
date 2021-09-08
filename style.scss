@@ -1,7 +1,7 @@
 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
-$tertiary-color: #99E200;
+$tertiary-color: #99E2D0;
 
 
 body {
@@ -19,8 +19,12 @@ h2 {
 
 a {
     text-decoration: none;
-    color: black;
 }
+
+ul a {
+    color: white;
+}
+
 
 header {
     display: flex;
@@ -29,8 +33,13 @@ header {
         width: 45vw;
         padding: 10px;
     }
+    .fa-arrow-left {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 1.2rem;
+    }
 }
-
 
 .localisation {
     background-color: #eaeaea;
@@ -69,38 +78,48 @@ header {
     }
 }
 
-
 .fonctionnement {
     padding-bottom: 20px;
+    position: relative;
     h2 {
         padding: 20px 0 5px 20px;
     }
-    .fonctionnement__liste {
-        padding-left: 10px;
-    }
-    .fonctionnement__liste li {
+    .fonctionnement__option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 20px;
         box-shadow: 5px 5px 10px #d4d4d4;
-        list-style-type: none;
         margin: 20px;
-        height: 7vh;
+        height: 10vh;
         background-color: #f6f6f6;
-        text-align: center;
-        padding-top: 20px;
-        width: 90%;
         font-weight: bold;
+        &:hover {
+            background-color: #f5edff;
+        }
+    }
+    .fonctionnement__numero {
+        color: white;
+        background-color: $primary-color;
+        border-radius: 50%;
+        position:absolute;
+        left: 10px;
+        font-size: 0.8rem;
+        padding: 5px 8px 5px 8px;
     }
     .icone {
-        padding: 0 20px 0 2px;
         color: grey;
+        padding: 0 25px 0 15px;
+        &:hover {
+            color: $primary-color;
+        }    
     }
 }
-
-
 
 .restaurants-liste {
     background-color: #f6f6f6;
     padding-bottom: 50px;
+  
     h2 {
         padding: 40px 0 0 20px;
     }
@@ -110,6 +129,7 @@ header {
         margin: 15px;
         box-shadow: 5px 5px 10px #d4d4d4;
         height: 36vh;
+        position: relative;
     }
     article img {
         height: 25vh;
@@ -117,7 +137,11 @@ header {
         object-fit: cover;
         border-radius: 20px 20px 0 0;
     }  
+    a {
+        color: black;
+    }
 }
+
 
 .restaurants-liste__titre {
     h4 {
@@ -129,6 +153,32 @@ header {
         padding-left: 12px;
     }
 }
+
+.restaurants-liste__nouveau {
+    position: absolute;
+    background-color: $tertiary-color;
+    color: #0a8d6d;
+    top: 15px;
+    right: 10px;
+    height: 30px;
+    width: 80px;
+    border-radius: 2px;
+    p {
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+}
+
+.restaurants-liste__coeur {
+    position: absolute;
+    font-size: 1.5rem;
+    right: 30px;
+    bottom: 27px;
+}
+
 
 
 footer {
@@ -142,25 +192,12 @@ footer {
     .footer__liste ul {
         list-style-type: none;
         padding: 4px 0 13px 18px;
+    }
         li {
             padding: 5px;
-        }
     }
     .fa-utensils, .fa-hands-helping { 
         padding: 0 10px 0 5px;  
-    }
-}
-
-
-.header-restaurant {
-    display: flex;
-    padding-bottom: 10px;
-    .fa-arrow-left {
-        padding: 14px;
-    } 
-    .header-restaurant__logo {
-        height: 4.5vh;
-        padding: 10px 0 8px 50px;
     }
 }
 
