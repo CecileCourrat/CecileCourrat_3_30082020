@@ -87,7 +87,6 @@ header .fa-arrow-left {
 
 .fonctionnement .fonctionnement__option {
   display: flex;
-  justify-content: center;
   align-items: center;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #d4d4d4;
@@ -114,6 +113,7 @@ header .fa-arrow-left {
 .fonctionnement .icone {
   color: grey;
   padding: 0 25px 0 15px;
+  margin-left: 20px;
 }
 
 .fonctionnement .icone:hover {
@@ -193,7 +193,7 @@ footer {
 
 footer .footer__logo {
   font-family: 'shrikhand';
-  padding: 10px 0 0 18px;
+  padding: 10px 0 0 23px;
 }
 
 footer .footer__liste ul {
@@ -218,44 +218,71 @@ footer .fa-utensils, footer .fa-hands-helping {
 .menu-restaurant {
   background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
-  padding: 20px 0 70px 15px;
+  padding: 20px 0 70px 12px;
+  position: relative;
+  bottom: 32px;
+  margin-bottom: -40px;
 }
 
 .menu-restaurant .menu-restaurant__titre {
-  display: flex;
-  padding-left: 20px;
+  font-size: 1.2rem;
+  position: relative;
 }
 
 .menu-restaurant .fa-heart {
-  padding: 25px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 8px;
+  right: 40px;
+}
+
+.menu-restaurant h3 {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.menu-restaurant .bordure {
+  background-color: #99E2D0;
+  width: 50px;
+  height: 0.5vh;
+  margin-bottom: 20px;
 }
 
 .menu-restaurant button {
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  border-radius: 20px;
+  border-radius: 30px;
   border: none;
-  width: 40vw;
+  padding: 0 35px 0 35px;
   height: 8vh;
   font-weight: bold;
-  margin: 15px 25px 8px 70px;
+  font-size: 0.9rem;
+  box-shadow: 5px 5px 10px #d4d4d4;
+  margin: 35px 0 10px 85px;
 }
 
-.menu__liste {
+.menu-liste {
   border-radius: 20px;
   background-color: white;
-  width: 90vw;
+  width: 95%;
   margin-bottom: 15px;
   box-shadow: 5px 5px 10px #d4d4d4;
+  font-size: 0.9rem;
 }
 
-.menu__liste h3 {
+.menu-liste h4 {
   padding: 12px 0 0 12px;
   margin: 3px;
 }
 
-.menu__liste p {
+.menu-liste p {
   padding: 0 0 12px 12px;
   margin: 3px;
+}
+
+.menu-liste .menu-liste__ligne2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-right: 20px;
 }
