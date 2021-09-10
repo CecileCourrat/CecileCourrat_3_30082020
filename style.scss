@@ -30,16 +30,30 @@ header {
     display: flex;
     justify-content: center;
     .header__logo {
-        width: 45vw;
+        width: 150px;
         padding: 10px;
     }
-    .fa-arrow-left {
+    @media screen and (min-width: 600px) {
+        .header__logo {
+            width: 200px;
+        }
+    @media screen and (min-width: 1440px) {
+        .header__logo {
+            width: 300px
+        }
+}
+    }
+        .fa-arrow-left {
         position: absolute;
         top: 15px;
         left: 15px;
         font-size: 1.2rem;
     }
 }
+
+
+
+    
 
 .localisation {
     background-color: #eaeaea;
@@ -75,6 +89,11 @@ header {
         font-weight: bold;
         font-size: 0.9rem;
         box-shadow: 5px 5px 10px #d4d4d4;
+        transition: opacity 250ms;
+        &:hover {
+            box-shadow: 5px 5px 10px #8f8d8d;
+            opacity: 0.85;
+        }
     }
 }
 
@@ -191,13 +210,24 @@ footer {
     }
     .footer__liste ul {
         list-style-type: none;
-        padding: 4px 0 13px 18px;
-    }
+        padding: 4px 0 13px 18px;   
         li {
             padding: 5px;
+        }
     }
     .fa-utensils, .fa-hands-helping { 
         padding: 0 10px 0 5px;  
+    }
+    @media screen and (min-width: 1024px) {
+        .footer__logo {
+            text-align: center;
+            padding: 10px 0 0 0;
+        }
+        .footer__liste ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 4px 0 13px 0;
+        }
     }
 }
 
@@ -249,6 +279,11 @@ footer {
     font-size: 0.9rem;
     box-shadow: 5px 5px 10px #d4d4d4;
     margin: 35px 0 10px 85px;
+    transition: opacity 250ms;
+    &:hover {
+        box-shadow: 5px 5px 10px #8f8d8d;
+        opacity: 0.85;
+    }
 }
 
 
