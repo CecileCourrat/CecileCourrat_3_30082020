@@ -86,8 +86,7 @@ header .fa-arrow-left {
 
 .presentation button {
   border-radius: 30px;
-  height: 8vh;
-  padding: 0 15px 0 15px;
+  padding: 17px;
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -99,7 +98,7 @@ header .fa-arrow-left {
 
 .presentation button:hover {
   box-shadow: 5px 5px 10px #8f8d8d;
-  opacity: 0.85;
+  opacity: 0.80;
 }
 
 .fonctionnement {
@@ -111,13 +110,20 @@ header .fa-arrow-left {
   padding: 20px 0 5px 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  .fonctionnement h2 {
+    text-align: center;
+    padding: 20px 0 5px 0;
+  }
+}
+
 .fonctionnement .fonctionnement__option {
   display: flex;
   align-items: center;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #d4d4d4;
   margin: 20px;
-  height: 10vh;
+  padding: 10px;
   background-color: #f6f6f6;
   font-weight: bold;
 }
@@ -165,8 +171,16 @@ header .fa-arrow-left {
   padding-bottom: 50px;
 }
 
-.restaurants-liste h2 {
+.restaurants-liste .restaurants-liste__h2 {
   padding: 40px 0 0 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants-liste .restaurants-liste__h2 {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 0 0;
+  }
 }
 
 .restaurants-liste article {
@@ -174,12 +188,11 @@ header .fa-arrow-left {
   background-color: white;
   margin: 15px;
   box-shadow: 5px 5px 10px #d4d4d4;
-  height: 36vh;
   position: relative;
 }
 
 .restaurants-liste article img {
-  height: 25vh;
+  max-height: 200px;
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
@@ -195,10 +208,6 @@ header .fa-arrow-left {
     flex-wrap: wrap;
     justify-content: center;
   }
-  h2 {
-    width: 100%;
-    text-align: center;
-  }
   article {
     width: 40%;
   }
@@ -211,7 +220,7 @@ header .fa-arrow-left {
 
 .restaurants-liste__titre p {
   margin: 0;
-  padding-left: 12px;
+  padding: 0 0 10px 12px;
 }
 
 .restaurants-liste__nouveau {
@@ -237,7 +246,7 @@ header .fa-arrow-left {
   position: absolute;
   font-size: 1.5rem;
   right: 30px;
-  bottom: 27px;
+  bottom: 20px;
 }
 
 footer {
