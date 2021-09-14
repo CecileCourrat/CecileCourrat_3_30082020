@@ -43,9 +43,15 @@ header .header__logo {
 
 header .fa-arrow-left {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 2%;
+  left: 5%;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  header .fa-arrow-left {
+    font-size: 1.5rem;
+  }
 }
 
 .localisation {
@@ -70,7 +76,7 @@ header .fa-arrow-left {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
-  width: 60%;
+  width: 65%;
 }
 
 .presentation {
@@ -84,7 +90,7 @@ header .fa-arrow-left {
   padding-bottom: 10px;
 }
 
-.presentation button {
+button {
   border-radius: 30px;
   padding: 17px;
   border: none;
@@ -96,7 +102,7 @@ header .fa-arrow-left {
   transition: opacity 250ms;
 }
 
-.presentation button:hover {
+button:hover {
   box-shadow: 5px 5px 10px #8f8d8d;
   opacity: 0.80;
 }
@@ -292,7 +298,7 @@ footer .fa-utensils, footer .fa-hands-helping {
 
 .restaurant__img {
   width: 100%;
-  height: 40vh;
+  max-height: 300px;
   object-fit: cover;
 }
 
@@ -306,8 +312,15 @@ footer .fa-utensils, footer .fa-hands-helping {
 }
 
 .menu-restaurant .menu-restaurant__titre {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-restaurant .menu-restaurant__titre {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 }
 
 .menu-restaurant .fa-heart {
@@ -315,6 +328,12 @@ footer .fa-utensils, footer .fa-hands-helping {
   position: absolute;
   top: 8px;
   right: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-restaurant .fa-heart {
+    right: 28%;
+  }
 }
 
 .menu-restaurant h3 {
@@ -325,27 +344,8 @@ footer .fa-utensils, footer .fa-hands-helping {
 .menu-restaurant .bordure {
   background-color: #99E2D0;
   width: 50px;
-  height: 0.5vh;
+  height: 0.2rem;
   margin-bottom: 20px;
-}
-
-.menu-restaurant button {
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  border-radius: 30px;
-  border: none;
-  padding: 0 35px 0 35px;
-  height: 8vh;
-  font-weight: bold;
-  font-size: 0.9rem;
-  box-shadow: 5px 5px 10px #d4d4d4;
-  margin: 35px 0 10px 85px;
-  transition: opacity 250ms;
-}
-
-.menu-restaurant button:hover {
-  box-shadow: 5px 5px 10px #8f8d8d;
-  opacity: 0.85;
 }
 
 .menu-liste {
@@ -372,4 +372,13 @@ footer .fa-utensils, footer .fa-hands-helping {
   justify-content: space-between;
   align-items: baseline;
   margin-right: 20px;
+}
+
+.menu-liste__bouton {
+  text-align: center;
+  padding: 25px 12px 0 0;
+}
+
+.menu-liste__bouton .menu-liste__bouton--order {
+  width: 180px;
 }
