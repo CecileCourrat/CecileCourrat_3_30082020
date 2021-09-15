@@ -329,6 +329,10 @@ footer {
     margin-bottom: 15px;
     box-shadow: 5px 5px 10px #d4d4d4;
     font-size: 0.9rem;
+    @media screen and (min-width: 1024px) {
+        width: 29%;
+        
+    }
     h4 {
         padding: 12px 0 0 12px;
         margin: 3px;
@@ -342,6 +346,20 @@ footer {
         justify-content: space-between;
         align-items: baseline;
         margin-right: 20px;
+    }
+}
+
+.menu-restaurant__carte {
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: space-evenly;    
+    }
+}
+.menu-restaurant__carte2 {
+    @media screen and (min-width:1024px) {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-evenly;   
     }
 }
 

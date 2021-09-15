@@ -357,6 +357,12 @@ footer .fa-utensils, footer .fa-hands-helping {
   font-size: 0.9rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu-liste {
+    width: 29%;
+  }
+}
+
 .menu-liste h4 {
   padding: 12px 0 0 12px;
   margin: 3px;
@@ -372,6 +378,21 @@ footer .fa-utensils, footer .fa-hands-helping {
   justify-content: space-between;
   align-items: baseline;
   margin-right: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-restaurant__carte {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-restaurant__carte2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .menu-liste__bouton {
