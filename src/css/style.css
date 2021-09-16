@@ -138,6 +138,10 @@ button:hover {
   background-color: #f5edff;
 }
 
+.fonctionnement .fonctionnement__option:hover .icone {
+  color: #9356DC;
+}
+
 .fonctionnement .fonctionnement__numero {
   color: white;
   background-color: #9356DC;
@@ -154,10 +158,6 @@ button:hover {
   margin-left: 20px;
 }
 
-.fonctionnement .icone:hover {
-  color: #9356DC;
-}
-
 @media screen and (min-width: 1024px) {
   .fonctionnement .fonctionnement__liste {
     display: flex;
@@ -168,7 +168,7 @@ button:hover {
   }
   .fonctionnement .fonctionnement__numero {
     position: static;
-    margin: -10px;
+    margin: -20px;
   }
 }
 
@@ -275,13 +275,24 @@ footer .footer__liste ul li {
   padding: 5px;
 }
 
+footer .footer__liste ul li:hover {
+  color: #99E2D0;
+}
+
+footer .footer__liste ul li:hover a {
+  color: #99E2D0;
+}
+
 footer .fa-utensils, footer .fa-hands-helping {
   padding: 0 10px 0 5px;
 }
 
 @media screen and (min-width: 1024px) {
   footer .footer__logo {
-    padding: 10px 0 0 65px;
+    padding: 10px 0 0 0;
+  }
+  footer .footer__logo h3 {
+    text-align: center;
   }
   footer .footer__liste ul {
     display: flex;
@@ -302,6 +313,17 @@ footer .fa-utensils, footer .fa-hands-helping {
   object-fit: cover;
 }
 
+@keyframes apparition-menu {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .menu-restaurant {
   background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
@@ -311,13 +333,13 @@ footer .fa-utensils, footer .fa-hands-helping {
   margin-bottom: -40px;
 }
 
-.menu-restaurant .menu-restaurant__titre {
+.menu-restaurant__titre {
   font-size: 1.1rem;
   position: relative;
 }
 
 @media screen and (min-width: 1024px) {
-  .menu-restaurant .menu-restaurant__titre {
+  .menu-restaurant__titre {
     font-size: 1.4rem;
     text-align: center;
   }
@@ -355,6 +377,7 @@ footer .fa-utensils, footer .fa-hands-helping {
   margin-bottom: 15px;
   box-shadow: 5px 5px 10px #d4d4d4;
   font-size: 0.9rem;
+  animation: apparition-menu 1000ms backwards;
 }
 
 @media screen and (min-width: 1024px) {
@@ -380,6 +403,18 @@ footer .fa-utensils, footer .fa-hands-helping {
   margin-right: 20px;
 }
 
+.menu-anim-1 {
+  animation-delay: 200ms;
+}
+
+.menu-anim-2 {
+  animation-delay: 400ms;
+}
+
+.menu-anim-3 {
+  animation-delay: 600ms;
+}
+
 @media screen and (min-width: 1024px) {
   .menu-restaurant__carte {
     display: flex;
@@ -400,6 +435,6 @@ footer .fa-utensils, footer .fa-hands-helping {
   padding: 25px 12px 0 0;
 }
 
-.menu-liste__bouton .menu-liste__bouton--order {
+.menu-liste__bouton--order {
   width: 180px;
 }
