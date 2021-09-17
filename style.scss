@@ -3,6 +3,9 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
+@mixin shadow {
+    box-shadow: 5px 5px 10px #d4d4d4;
+}
 
 body {
     font-family: 'roboto', sans-serif;
@@ -24,6 +27,63 @@ a {
 ul a {
     color: white;
 }
+
+
+.loader {
+    position: fixed;
+    z-index: 1;
+    background-color: #353535;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: 'shrikhand';
+    animation: loader 3s linear both;
+    animation-delay: 1s;    
+}
+
+.oh {
+    animation: flash 4s;
+  }
+
+.my {
+    animation: flash 4s;
+  }
+  
+.food {
+    animation: flash 4s;
+  }
+
+
+@keyframes flash {
+    0% {
+      color: #9356dc;
+    }
+   50% {
+      color: #ff79da;
+    }
+    70% {
+      color: #99e2d0;
+    }
+  }
+
+
+@keyframes loader {
+    70% {
+        opacity: 1;
+    }
+    99.99% {
+        z-index: 1;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
 
 
 header {
@@ -54,10 +114,7 @@ header {
     }
     }
 }
-
-
-
-    
+   
 
 .localisation {
     background-color: #eaeaea;
@@ -99,7 +156,7 @@ button {
         color: white;
         font-weight: bold;
         font-size: 0.9rem;
-        box-shadow: 5px 5px 10px #d4d4d4;
+        @include shadow;
         transition: opacity 250ms;
         &:hover {
             box-shadow: 5px 5px 10px #8f8d8d;
@@ -122,11 +179,11 @@ button {
         display: flex;
         align-items: center;
         border-radius: 20px;
-        box-shadow: 5px 5px 10px #d4d4d4;
         margin: 20px;
         padding: 10px;
         background-color: #f6f6f6;
         font-weight: bold;
+        @include shadow;
         &:hover {
             background-color: #f5edff;
         }
@@ -179,7 +236,7 @@ button {
         border-radius: 20px;
         background-color: white;
         margin: 15px;
-        box-shadow: 5px 5px 10px #d4d4d4;
+        @include shadow;
         position: relative;
     }
     article img {
@@ -348,9 +405,9 @@ footer {
     background-color: white;
     width: 95%;
     margin-bottom: 15px;
-    box-shadow: 5px 5px 10px #d4d4d4;
+    @include shadow;
     font-size: 0.9rem;
-    animation: apparition-menu 1000ms backwards;
+    animation: apparition-menu 2000ms backwards;
     @media screen and (min-width: 1024px) {
         width: 29%;   
     }
@@ -375,11 +432,11 @@ footer {
 }
 
 .menu-anim-2 {
-    animation-delay: 400ms;
+    animation-delay: 500ms;
 }
 
 .menu-anim-3 {
-    animation-delay: 600ms;
+    animation-delay: 800ms;
 }
 
 .menu-restaurant__carte {
