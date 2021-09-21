@@ -40,7 +40,7 @@ ul a {
     align-items: center;
     font-size: 4rem;
     font-family: 'shrikhand';
-    animation: loader linear 2500ms forwards;
+    animation: loader cubic-bezier(0.39, 0.58, 0.57, 1) 3000ms forwards;
 }
 
 @keyframes loader {
@@ -51,6 +51,9 @@ ul a {
         opacity: 1;
         z-index: 1;
     }
+    99% {
+        opacity: 0;
+    }   
      100% {
         opacity: 0;
         z-index: -1;
@@ -58,20 +61,27 @@ ul a {
  }
 
  .oh {
-    color: #9356DC;
+    color: $primary-color;
     animation: logo 2000ms 200ms backwards;
   }
   
   .my {
-    color: #FF79DA;
+    color: $secondary-color;
     animation: logo 2000ms 600ms backwards;
   }
   
   .food {
-    color: #99E2D0;
+    color: $tertiary-color;
     animation: logo 2000ms 1000ms backwards;
   }
-  
+
+  .point {
+    background: linear-gradient(0.25turn, $secondary-color, $primary-color, $tertiary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logo 2000ms 1400ms backwards;
+  }
+
   @keyframes logo {
     0% {
       opacity: 0;
@@ -290,9 +300,31 @@ button {
 .restaurants-liste__coeur {
     position: absolute;
     font-size: 1.5rem;
-    right: 30px;
+    right: 5px;
     bottom: 20px;
+    .full-heart {
+        position: relative;
+        right: 1.86rem;
+        background: linear-gradient(#9356DC,#FF79DA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform-origin: bottom;
+        transform: scale(0);
+        transition: 500ms ease-in;
+        z-index: 1;
+    }
 }
+
+.restaurants-liste__coeur:hover .full-heart {
+    transform: scale(1);
+}
+
+.restaurants-liste__coeur:hover .empty-heart {
+    background: linear-gradient(#FF79DA, #9356DC);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+   
 
 
 
@@ -374,17 +406,8 @@ footer {
         font-size: 1.4rem;
         text-align: center;    
     }
-    }
-    .fa-heart {
-        font-size: 1.5rem;
-        position:absolute;
-        top: 8px;
-        right: 40px;
-    @media  screen and (min-width:1024px) {
-        right: 28%; 
-    }
-    }
-    h3 {
+}
+     h3 {
         font-weight: 400;
         margin-bottom: 5px;
     }
@@ -395,6 +418,38 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+.menu-restaurant__coeur {
+    font-size: 1.5rem;
+    position:absolute;
+    top: 8px;
+    right: 40px;
+     @media  screen and (min-width:1024px) {
+       right: 28%; 
+   }
+   .full-heart {
+    position: relative;
+    right: 1.86rem;
+    background: linear-gradient(#9356DC,#FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform-origin: bottom;
+    transform: scale(0);
+    transition: 500ms ease-in;
+    z-index: 1;
+}
+ }
+
+.menu-restaurant__coeur:hover .full-heart {
+    transform: scale(1);
+}
+
+.menu-restaurant__coeur:hover .empty-heart {
+    background: linear-gradient(#FF79DA, #9356DC);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
 
 
 .menu-liste {
@@ -429,11 +484,11 @@ footer {
 }
 
 .menu-anim-2 {
-    animation-delay: 500ms;
+    animation-delay: 600ms;
 }
 
 .menu-anim-3 {
-    animation-delay: 800ms;
+    animation-delay: 1000ms;
 }
 
 .menu-restaurant__carte {

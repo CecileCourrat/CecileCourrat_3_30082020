@@ -30,7 +30,7 @@ ul a {
   align-items: center;
   font-size: 4rem;
   font-family: 'shrikhand';
-  animation: loader linear 2500ms forwards;
+  animation: loader cubic-bezier(0.39, 0.58, 0.57, 1) 3000ms forwards;
 }
 
 @keyframes loader {
@@ -40,6 +40,9 @@ ul a {
   90% {
     opacity: 1;
     z-index: 1;
+  }
+  99% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -60,6 +63,13 @@ ul a {
 .food {
   color: #99E2D0;
   animation: logo 2000ms 1000ms backwards;
+}
+
+.point {
+  background: linear-gradient(0.25turn, #FF79DA, #9356DC, #99E2D0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: logo 2000ms 1400ms backwards;
 }
 
 @keyframes logo {
@@ -303,8 +313,30 @@ button:hover {
 .restaurants-liste__coeur {
   position: absolute;
   font-size: 1.5rem;
-  right: 30px;
+  right: 5px;
   bottom: 20px;
+}
+
+.restaurants-liste__coeur .full-heart {
+  position: relative;
+  right: 1.86rem;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-origin: bottom;
+  transform: scale(0);
+  transition: 500ms ease-in;
+  z-index: 1;
+}
+
+.restaurants-liste__coeur:hover .full-heart {
+  transform: scale(1);
+}
+
+.restaurants-liste__coeur:hover .empty-heart {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 footer {
@@ -397,19 +429,6 @@ footer .fa-utensils, footer .fa-hands-helping {
   }
 }
 
-.menu-restaurant .fa-heart {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 8px;
-  right: 40px;
-}
-
-@media screen and (min-width: 1024px) {
-  .menu-restaurant .fa-heart {
-    right: 28%;
-  }
-}
-
 .menu-restaurant h3 {
   font-weight: 400;
   margin-bottom: 5px;
@@ -420,6 +439,41 @@ footer .fa-utensils, footer .fa-hands-helping {
   width: 50px;
   height: 0.2rem;
   margin-bottom: 20px;
+}
+
+.menu-restaurant__coeur {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 8px;
+  right: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-restaurant__coeur {
+    right: 28%;
+  }
+}
+
+.menu-restaurant__coeur .full-heart {
+  position: relative;
+  right: 1.86rem;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-origin: bottom;
+  transform: scale(0);
+  transition: 500ms ease-in;
+  z-index: 1;
+}
+
+.menu-restaurant__coeur:hover .full-heart {
+  transform: scale(1);
+}
+
+.menu-restaurant__coeur:hover .empty-heart {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu-liste {
@@ -460,11 +514,11 @@ footer .fa-utensils, footer .fa-hands-helping {
 }
 
 .menu-anim-2 {
-  animation-delay: 500ms;
+  animation-delay: 600ms;
 }
 
 .menu-anim-3 {
-  animation-delay: 800ms;
+  animation-delay: 1000ms;
 }
 
 @media screen and (min-width: 1024px) {
