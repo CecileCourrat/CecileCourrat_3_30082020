@@ -28,9 +28,15 @@ ul a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'shrikhand';
   animation: loader cubic-bezier(0.39, 0.58, 0.57, 1) 3000ms forwards;
+}
+
+@media screen and (min-width: 1024px) {
+  .loader {
+    font-size: 4rem;
+  }
 }
 
 @keyframes loader {
@@ -477,12 +483,15 @@ footer .fa-utensils, footer .fa-hands-helping {
 }
 
 .menu-liste {
+  display: flex;
+  justify-content: space-between;
   border-radius: 20px;
   background-color: white;
   width: 95%;
   margin-bottom: 15px;
   box-shadow: 5px 5px 10px #d4d4d4;
   font-size: 0.9rem;
+  overflow: hidden;
   animation: apparition-menu 2000ms backwards;
 }
 
@@ -492,21 +501,58 @@ footer .fa-utensils, footer .fa-hands-helping {
   }
 }
 
-.menu-liste h4 {
+.menu-liste .menu-liste__plats {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu-liste .menu-liste--nom {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   padding: 12px 0 0 12px;
   margin: 3px;
 }
 
-.menu-liste p {
+.menu-liste .menu-liste--details {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   padding: 0 0 12px 12px;
   margin: 3px;
 }
 
-.menu-liste .menu-liste__ligne2 {
+.menu-liste__enplus {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+}
+
+.menu-liste__enplus .menu-liste__enplus--prix {
+  font-weight: bold;
+  align-self: flex-end;
   margin-right: 20px;
+}
+
+.menu-liste__enplus .menu-liste__enplus--checkbox {
+  color: white;
+  background-color: #99E2D0;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+  width: 0;
+  height: 100%;
+  transition-duration: 0.4s;
+}
+
+.menu-liste:hover .menu-liste__enplus--checkbox {
+  width: 80px;
+  transition-duration: 0.7s;
+}
+
+.menu-liste:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.8s;
 }
 
 .menu-anim-1 {
