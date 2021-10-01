@@ -38,7 +38,7 @@ ul a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2.9rem;
     @media screen and (min-width:1024px) {
         font-size: 4rem;
     }
@@ -63,37 +63,36 @@ ul a {
     }
  }
 
- .oh {
+.oh {
     color: $primary-color;
     animation: logo 2000ms 200ms backwards;
-  }
+}
   
-  .my {
+.my {
     color: $secondary-color;
     animation: logo 2000ms 600ms backwards;
-  }
+}
   
-  .food {
+.food {
     color: $tertiary-color;
     animation: logo 2000ms 1000ms backwards;
-  }
+}
 
-  .point {
+.point {
     background: linear-gradient(0.25turn, $secondary-color, $primary-color, $tertiary-color);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     animation: logo 2000ms 1400ms backwards;
-  }
+}
 
-  @keyframes logo {
+@keyframes logo {
     0% {
       opacity: 0;
     }
     100% {
       opacity: 1;
     }
-  }
-
+}
 
 
 header {
@@ -113,14 +112,13 @@ header {
         }
     }
     }
-        .fa-arrow-left {
+    .fa-arrow-left {
         position: absolute;
         top: 2%;
         left: 5%;
         font-size: 1.2rem;
     @media screen and (min-width:1024px) {
-            font-size: 1.5rem;
-        
+        font-size: 1.5rem;    
     }
     }
 }
@@ -138,7 +136,7 @@ header {
     .fa-map-marker-alt {
         width: 10%;
     }
-    .localisation__formulaire {
+    &__formulaire {
         border: none;
         background-color: #eaeaea ;
         font-size: 1rem;
@@ -159,19 +157,19 @@ header {
 }
 
 button {
-        border-radius: 30px;
-        padding: 17px;
-        border: none;
-        background: linear-gradient( $secondary-color, $primary-color );
-        color: white;
-        font-weight: bold;
-        font-size: 0.9rem;
-        @include shadow;
-        transition: opacity 250ms;
-        &:hover {
-            box-shadow: 5px 5px 10px #8f8d8d;
-            opacity: 0.80;
-        }
+    border-radius: 30px;
+    padding: 17px;
+    border: none;
+    background: linear-gradient( $secondary-color, $primary-color );
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    @include shadow;
+    transition: opacity 250ms;
+    &:hover {
+        box-shadow: 5px 5px 10px #8f8d8d;
+        opacity: 0.80;
+    }
 }
 
 
@@ -183,9 +181,9 @@ button {
     @media screen and (min-width:1024px)  {
         text-align: center;  
         padding: 20px 0 5px 0;  
+     }
     }
-    }
-    .fonctionnement__option {
+    &__option {
         display: flex;
         align-items: center;
         border-radius: 20px;
@@ -201,7 +199,7 @@ button {
             color:$primary-color;
         }
     }
-    .fonctionnement__numero {
+    &__numero {
         color: white;
         background-color: $primary-color;
         border-radius: 50%;
@@ -216,25 +214,25 @@ button {
         margin-left: 20px;
     }
     @media  screen and (min-width:1024px) {
-        .fonctionnement__liste {
+        &__liste {
             display: flex;
             justify-content: space-around;
         }
-        .fonctionnement__option {
+        &__option {
             width: 30%;
         }  
-        .fonctionnement__numero {
+        &__numero {
             position: static;
             margin: -20px;
         }   
     }
 }
 
+
 .restaurants-liste {
     background-color: #f6f6f6;
     padding-bottom: 50px;
-  
-    .restaurants-liste__h2 {
+    &__h2 {
         padding: 40px 0 0 20px;
     @media screen and(min-width: 1024px) {
         width: 100%;
@@ -258,13 +256,13 @@ button {
     a {
         color: black;
     }   
-}
+    }
     @media screen and (min-width: 1024px) {
         .restaurants-liste {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-           }  
+        }  
         article {
             width: 40%;
         }  
@@ -308,9 +306,9 @@ button {
     .full-heart {
         position: relative;
         right: 1.86rem;
-        background: linear-gradient(#9356DC,#FF79DA);
+        background: linear-gradient($primary-color, $secondary-color);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
         transform-origin: bottom;
         transform: scale(0);
         transition: 500ms ease-in;
@@ -323,13 +321,11 @@ button {
 }
 
 .restaurants-liste__coeur:hover .empty-heart {
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($primary-color, $secondary-color);
      -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+     color: transparent;
 }
    
-
-
 
 footer {
     background-color:#353535;
@@ -376,24 +372,11 @@ footer {
 }
 
 
-
 .restaurant__img {
     width: 100%;   
     max-height: 300px; 
     object-fit: cover; 
 }
-
-@keyframes apparition-menu {
-    from {
-        transform: translateY(10px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  
 
 .menu-restaurant {
     background-color: #f6f6f6;
@@ -427,33 +410,51 @@ footer {
     position:absolute;
     top: 8px;
     right: 40px;
-     @media  screen and (min-width:1024px) {
-       right: 28%; 
-   }
+    @media  screen and (min-width:1024px) {
+       right: 26%; 
+    }
+    @media screen and (max-width: 320px) {
+       right: 1px;
+    }
+    @media screen and (max-width: 280px) {
+       top: 28px;
+       right: 100px;
+    }
+
    .full-heart {
     position: relative;
     right: 1.86rem;
-    background: linear-gradient(#9356DC,#FF79DA);
+    background: linear-gradient($primary-color, $secondary-color);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     transform-origin: bottom;
     transform: scale(0);
     transition: 500ms ease-in;
     z-index: 1;
+    }
 }
- }
 
 .menu-restaurant__coeur:hover .full-heart {
     transform: scale(1);
 }
 
 .menu-restaurant__coeur:hover .empty-heart {
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($primary-color, $secondary-color);
      -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+     color: transparent;
 }
 
-
+@keyframes apparition-menu {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+}
+  
 
 .menu-liste {
     display: flex;
@@ -469,18 +470,18 @@ footer {
     @media screen and (min-width: 1024px) {
         width: 29%;   
     }
-    .menu-liste__plats {
+    &__plats {
         white-space: nowrap;
         overflow: hidden;
     }
-    .menu-liste--nom {
+    &--nom {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
         padding: 12px 0 0 12px;
         margin: 3px; 
      }
-     .menu-liste--details{
+    &--details{
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -491,12 +492,12 @@ footer {
 
 .menu-liste__enplus {
     display: flex;
-    .menu-liste__enplus--prix {
+    &--prix {
         font-weight: bold;
         align-self: flex-end;
         margin-right: 20px;
       }
-      .menu-liste__enplus--checkbox {
+    &--checkbox {
         color: white;
         background-color: #99E2D0;
         font-size: 1.3em;
@@ -506,31 +507,30 @@ footer {
         border-radius: 0 20px 20px 0;
         width: 0;
         height: 100%;
-        transition-duration: 0.4s;
+        transition-duration: 400ms;
       }
 }
 
 .menu-liste:hover .menu-liste__enplus--checkbox {
     width: 80px;
-    transition-duration: 0.7s;
+    transition-duration: 700ms;
   }
 
 .menu-liste:hover i {
     transform: rotate(360deg);
-    transition-duration: 0.8s;
+    transition-duration: 800ms;
  }
- 
   
 .menu-anim-1 {
-    animation-delay: 200ms;
+    animation-delay: 300ms;
 }
 
 .menu-anim-2 {
-    animation-delay: 600ms;
+    animation-delay: 800ms;
 }
 
 .menu-anim-3 {
-    animation-delay: 1000ms;
+    animation-delay: 1300ms;
 }
 
 .menu-restaurant__carte {
